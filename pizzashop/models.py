@@ -3,8 +3,8 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Customer(models.Model):
-    first_name = models.CharField(max_length=100, verbose_name='Имя', blank=True)
-    last_name = models.CharField(max_length=100, verbose_name='Фамилия', blank=True)
+    first_name = models.CharField(max_length=50, verbose_name='Имя', blank=True)
+    last_name = models.CharField(max_length=50, verbose_name='Фамилия', blank=True)
     address = models.CharField(max_length=150, verbose_name='Адес')
     phone = PhoneNumberField(verbose_name='Телефон')
     email = models.EmailField(blank=True, verbose_name='Email')
@@ -19,6 +19,7 @@ class Customer(models.Model):
 
 class Item(models.Model):
     title = models.CharField(max_length=30, verbose_name='Название')
+    description = models.TextField(max_length=300, verbose_name='Описание', blank=True)
     price = models.PositiveSmallIntegerField(default=0, verbose_name='Цена')
     image = models.ImageField(upload_to='pizzashop/', blank=False, verbose_name='Логотип', default='')
 
@@ -53,7 +54,7 @@ class Order(models.Model):
     status = models.CharField(max_length=3, choices=STATUS, default=CREATED)
 
     def __str__(self):
-        return str(self.customer) + ' : ' + str(self.items)
+        return str(self.customer) + ' : ' + str(self.status)
 
     class Meta:
         verbose_name = 'Заказ'
@@ -64,3 +65,10 @@ class OrderItem(models.Model):
     item = models.ForeignKey(Item)
     order = models.ForeignKey(Order)
     count = models.PositiveSmallIntegerField(default=1)
+
+    def __str__(self):
+        return str(self.item) + ' : ' + str(self.order)
+
+    class Meta:
+        verbose_name = 'Товар в заказе'
+        verbose_name_plural = 'Товары в заказах'
