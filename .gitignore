@@ -107,6 +107,3 @@ venv.bak/
 
 .idea/workspace.xml
 templates/
-
-# pycharm
-.idea
