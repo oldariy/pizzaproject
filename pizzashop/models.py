@@ -18,14 +18,21 @@ class Customer(models.Model):
 
 
 class Item(models.Model):
-    title = models.CharField(max_length=30)
-    price = models.PositiveSmallIntegerField(default=0)
+    title = models.CharField(max_length=30, verbose_name='Название')
+    price = models.PositiveSmallIntegerField(default=0, verbose_name='Цена')
     image = models.ImageField(upload_to='pizzashop/', blank=False, verbose_name='Логотип', default='')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Товар'
+        verbose_name_plural = 'Товары'
 
 
 class Order(models.Model):
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='orders')
-    items = models.ManyToManyField(Item, through='OrderItem')
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='orders', verbose_name='Клиент')
+    items = models.ManyToManyField(Item, through='OrderItem', verbose_name='Товары')
 
     CREATED = 'CR'
     NOT_CONFIRMED = 'NCF'
@@ -45,8 +52,15 @@ class Order(models.Model):
     )
     status = models.CharField(max_length=3, choices=STATUS, default=CREATED)
 
+    def __str__(self):
+        return str(self.customer) + ' : ' + str(self.items)
+
+    class Meta:
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'
+
 
 class OrderItem(models.Model):
     item = models.ForeignKey(Item)
     order = models.ForeignKey(Order)
-    count = models.PositiveSmallIntegerField()
+    count = models.PositiveSmallIntegerField(default=1)
