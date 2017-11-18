@@ -31,7 +31,7 @@ class Order(models.Model):
         (NOT_CONFIRMED, 'Не подтвержден'),
         (CONFIRMED, 'Подтвержден'),
         (CANCELED_BY_CUSTOMER, 'Отменен заказчиком'),
-        (CANCELED_BY_OPERATOR, 'Отклонен заказчиком'),
+        (CANCELED_BY_OPERATOR, 'Отклонен оператором'),
         (COMPLETED, 'Выполнен'),
         (FAILED, 'Провален'),
     )
