@@ -3,20 +3,28 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Customer(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    address = models.CharField(max_length=150)
-    phone = PhoneNumberField()
-    email = models.EmailField(blank=True)
+    first_name = models.CharField(max_length=100, verbose_name='Имя', blank=True)
+    last_name = models.CharField(max_length=100, verbose_name='Фамилия', blank=True)
+    address = models.CharField(max_length=150, verbose_name='Адес')
+    phone = PhoneNumberField(verbose_name='Телефон')
+    email = models.EmailField(blank=True, verbose_name='Email')
+
+    def __str__(self):
+        return str(self.phone)
+
+    class Meta:
+        verbose_name = 'Клиент'
+        verbose_name_plural = 'Клиенты'
 
 
 class Item(models.Model):
     title = models.CharField(max_length=30)
     price = models.PositiveSmallIntegerField(default=0)
+    image = models.ImageField(upload_to='pizzashop/', blank=False, verbose_name='Логотип', default='')
 
 
 class Order(models.Model):
-    customer = models.ForeignKey(Customer, related_name='orders')
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='orders')
     items = models.ManyToManyField(Item, through='OrderItem')
 
     CREATED = 'CR'
