@@ -21,34 +21,37 @@
 			</div>
 
 			<div class="mdl-cell mdl-cell--12-col">
-				<h4>Меню пиццы:</h4>
+				<h4>Товар:</h4>
 			</div>
 
-			{% for item in items %}
-				<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+				<div class="mdl-cell mdl-cell--12-col">
 					<div class="mdl-card--item mdl-card mdl-shadow--2dp">
-						<a href="{% url 'item' item.id %}">
-							<img src="/media/{{ item.image }}" alt="">
-						</a>
-						<div class="mdl-card__title">
-							<h2 class="mdl-card__title-text">{{ item.title }}</h2>
+
+						<div class="mdl-grid margin-0">
+							<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet-col">
+								<img src="/media/{{ item.image }}" alt="">
+							</div>
+
+							<div class="mdl-cell mdl-cell--8-col mdl-cell--3-col-tablet-col">
+								<div class="mdl-card__title">
+									<h2 class="mdl-card__title-text">{{ item.title }}</h2>
+								</div>
+								<div class="mdl-card__supporting-text">
+									<p>{{ item.description }}</p>
+									<p class="mdl-card__price"> Цена: <b>{{ item.price }} </b>руб.</p>
+								</div>
+								<div class="mdl-card__actions mdl-card--border">
+									<a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+										Заказать
+									</a>
+							</div>
 						</div>
-						<div class="mdl-card__supporting-text">
-							<p>{{ item.description|truncatechars_html:80 }}</p>
-							<p class="mdl-card__price"> Цена: <b>{{ item.price }} </b>руб.</p>
-						</div>
-						<div class="mdl-card__actions mdl-card--border">
-							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{% url 'item' item.id %}">
-								Подробнее
-							</a>
-							<a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-								Заказать
-							</a>
+
+
 
 						</div>
 					</div>
 				</div>
-			{% endfor %}
 
 		</div>
 	</div>
