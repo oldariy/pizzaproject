@@ -42,3 +42,10 @@ img {
 .margin-0 {
 	margin: 0;
 }
+.item__img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-height: 260px;
+	overflow: hidden;
+}
