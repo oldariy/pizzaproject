@@ -5,6 +5,9 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+.mdl-layout__container {
+	position: static;
+}
 .header {
 	/*padding-top: 64px;*/
 	max-width: 1200px;
@@ -48,4 +51,35 @@ img {
 	align-items: center;
 	max-height: 260px;
 	overflow: hidden;
+}
+.basket__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.basket {
+	position: relative;
+	width: 280px;
+	max-width: 100%;
+}
+.basket__text {
+	font-size: 18px;
+	padding-right: 30px;
+}
+.basket__ul {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	list-style: none;
+	border-radius: 5px;
+	border: 2px solid darkred;
+	box-sizing: border-box;
+}
+.basket__item {
+	background-color: darkred;
+	padding: 5px;
+	color: #fff;
 }
