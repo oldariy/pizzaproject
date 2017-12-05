@@ -26,12 +26,17 @@ def basket_adding(request):
     data = request.POST
     item_id = data.get('itemId')
     count = data.get('count')
-    # new_item = BasketItem.objects.create(session_key=session_key, item_id=item_id, count=count)
-    new_item, created = BasketItem.objects.get_or_create(session_key=session_key, item_id=item_id, is_active=True, defaults={"count": count})
-    if not created:
-        print("not created")
-        new_item.count += int(count)
-        new_item.save(force_update=True)
+    is_delete = data.get("is_delete")
+
+    if is_delete == 'true':
+        BasketItem.objects.filter(id=item_id).update(is_active=False)
+    else:
+        new_item, created = BasketItem.objects.get_or_create(session_key=session_key, item_id=item_id, is_active=True, defaults={"count": count})
+
+        if not created:
+            print("not created")
+            new_item.count += int(count)
+            new_item.save(force_update=True)
 
     items_in_basket = BasketItem.objects.filter(session_key=session_key, is_active=True, order__isnull=True)
     items_total_count = items_in_basket.count()

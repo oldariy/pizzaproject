@@ -29,7 +29,7 @@
     <ul class="basket__ul">
 			{% for item_in_basket in items_in_basket %}
 				<li class="basket__item"> {{ item_in_basket.item.title  }} {{ item_in_basket.count  }} шт. {{ item_in_basket.total_price }} руб.
-					<a class="delete-item" href="">x</a></li>
+					<a class="delete-item" href=""  data-item_id="{{ item_in_basket.id }}">x</a></li>
 			{% endfor %}
     </ul>
   </div>

@@ -34,7 +34,7 @@ $(document).ready(function () {
 					$('.basket__ul').html("");
 					$.each(data.items, function (k, v) {
 						$('.basket__ul').append('<li class="basket__item">' + v.name + ' ' + v.count + ' ' + 'шт. ' + (v.price_per_item * v.count) + ' руб. '
-							+ '<a class="delete-item" href="">x</a>' + '</li>');
+							+ '<a class="delete-item" href="" data-item_id="' + v.id + '">x</a>' + '</li>');
 					});
 					
 				}
@@ -55,6 +55,43 @@ $(document).ready(function () {
 	
 	$(document).on('click', '.delete-item', function (e) {
 		e.preventDefault();
-		$(this).closest('li').remove();
+		itemId = $(this).data("item_id");
+		console.log("itemId = " + itemId);
+		count = 0;
+		var data = {};
+		data.itemId = itemId;
+		data.count = count;
+		var csrf_token = $('#order-form [name="csrfmiddlewaretoken"]').val();
+		data["csrfmiddlewaretoken"] = csrf_token;
+		
+		data["is_delete"] = true;
+		
+		var url = orderForm.attr("action");
+		
+		console.log(data);
+		$.ajax({
+			url: url,
+			type: 'POST',
+			data: data,
+			cache: true,
+			success: function (data) {
+				console.log("OK");
+				
+				console.log(data['items_total_count']);
+				if (data['items_total_count'] || data['items_total_count'] == 0) {
+					$('#basket_total_count').text("(" + data['items_total_count'] + ")");
+					$('.basket__ul').html("");
+					$.each(data.items, function (k, v) {
+						$('.basket__ul').append('<li class="basket__item">' + v.name + ' ' + v.count + ' ' + 'шт. ' + (v.price_per_item * v.count) + ' руб. '
+							+ '<a class="delete-item" href="" data-item_id="' + v.id + '">x</a>' + '</li>');
+					});
+					
+				}
+				
+			},
+			error: function () {
+				console.log("error")
+			}
+		});
 	});
 });
