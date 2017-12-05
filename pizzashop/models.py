@@ -79,8 +79,8 @@ class BasketItem(models.Model):
     item = models.ForeignKey(Item)
     order = models.ForeignKey(Order, blank=True, null=True)
     count = models.PositiveSmallIntegerField(default=1)
-    price_per_item = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)  # price*nmb
+    price_per_item = models.PositiveSmallIntegerField(default=0)
+    total_price = models.PositiveSmallIntegerField(default=0)  # price*nmb
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)

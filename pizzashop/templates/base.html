@@ -17,11 +17,20 @@
 <div class="basket__wrapper">
   <a class="mdl-navigation__link basket__text" href="">Корзина
 		<span id="basket_total_amount"></span>
-		<span id="basket_total_count"></span>
+		<span id="basket_total_count">
+			{% if items_total_count %}
+				({{ items_total_count }})
+			{% else %}
+				(0)
+			{% endif %}
+		</span>
 	</a>
   <div class="basket hidden">
     <ul class="basket__ul">
-
+			{% for item_in_basket in items_in_basket %}
+				<li class="basket__item"> {{ item_in_basket.item.title  }} {{ item_in_basket.count  }} шт. {{ item_in_basket.total_price }} руб.
+					<a class="delete-item" href="">x</a></li>
+			{% endfor %}
     </ul>
   </div>
 </div>
