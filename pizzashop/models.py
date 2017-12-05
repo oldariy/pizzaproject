@@ -71,4 +71,30 @@ class OrderItem(models.Model):
 
     class Meta:
         verbose_name = 'Товар в заказе'
-        verbose_name_plural = 'Товары в заказах'
+        verbose_name_plural = 'Товары в заказе'
+
+
+class BasketItem(models.Model):
+    session_key = models.CharField(max_length=128, blank=True, null=True, default=None)
+    item = models.ForeignKey(Item)
+    order = models.ForeignKey(Order, blank=True, null=True)
+    count = models.PositiveSmallIntegerField(default=1)
+    price_per_item = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)  # price*nmb
+    is_active = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True, auto_now=False)
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+
+    def __str__(self):
+        return str(self.item) + ' : ' + str(self.order)
+
+    class Meta:
+        verbose_name = 'Товар в корзине'
+        verbose_name_plural = 'Товары в корзине'
+
+    def save(self, *args, **kwargs):
+        price_per_item = self.item.price
+        self.price_per_item = price_per_item
+        self.total_price = int(self.count) * price_per_item
+
+        super(BasketItem, self).save(*args, **kwargs)
