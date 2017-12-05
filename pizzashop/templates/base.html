@@ -15,8 +15,7 @@
 <body>
 
 <div class="basket__wrapper">
-  <a class="mdl-navigation__link basket__text" href="">Корзина
-		<span id="basket_total_amount"></span>
+	<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored show-modal">Корзина
 		<span id="basket_total_count">
 			{% if items_total_count %}
 				({{ items_total_count }})
@@ -24,15 +23,26 @@
 				(0)
 			{% endif %}
 		</span>
-	</a>
-  <div class="basket hidden">
-    <ul class="basket__ul">
-			{% for item_in_basket in items_in_basket %}
-				<li class="basket__item"> {{ item_in_basket.item.title  }} {{ item_in_basket.count  }} шт. {{ item_in_basket.total_price }} руб.
-					<a class="delete-item" href=""  data-item_id="{{ item_in_basket.id }}">x</a></li>
-			{% endfor %}
-    </ul>
-  </div>
+	</button>
+  <dialog class="mdl-dialog">
+		<h3 class="mdl-dialog__title">Корзина</h3>
+    <div class="mdl-dialog__content">
+			<span id="basket_total_amount"></span>
+			<div class="basket">
+				<ul class="basket__ul">
+					{% for item_in_basket in items_in_basket %}
+						<li class="basket__item"> {{ item_in_basket.item.title }} {{ item_in_basket.count }}
+							шт. {{ item_in_basket.total_price }} руб.
+							<a class="delete-item" href="" data-item_id="{{ item_in_basket.id }}">x</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+    </div>
+    <div class="mdl-dialog__actions mdl-dialog__actions">
+      <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Оформить заказ</button>
+      <button type="button" class="mdl-button close">Отмена</button>
+    </div>
+  </dialog>
 </div>
 
 <div class="mdl-layout mdl-js-layout">
