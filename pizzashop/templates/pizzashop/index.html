@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}
+	Доставка пиццы в Омске
+{% endblock %}
+
+
+{% block content %}
+	<div class="header">
+		<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--12-col">
+				<div class="mdl-grid for-header">
+					<div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
+						<h3 class="company">Доставка пиццы в Омске</h3>
+					</div>
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet for-header__right">
+						<h4 class="phone">8-908-123-456-78-90</h4>
+						<span class="time">Режим работы: с 11:00 до 23:00 <br>без обеда и выходных</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="mdl-cell mdl-cell--12-col">
+				<h4>Меню пиццы:</h4>
+			</div>
+
+			{% for item in items %}
+				<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+					<div class="mdl-card--item mdl-card mdl-shadow--2dp">
+						<a href="{% url 'item' item.id %}" class="item__img">
+							<img src="/media/{{ item.image }}" alt="">
+						</a>
+						<div class="mdl-card__title">
+							<h2 class="mdl-card__title-text">{{ item.title }}</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							<p>{{ item.description|truncatechars_html:80 }}</p>
+							<p class="mdl-card__price"> Цена: <b>{{ item.price }} </b>руб.</p>
+						</div>
+						<div class="mdl-card__actions mdl-card--border">
+							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{% url 'item' item.id %}">
+								Подробнее
+							</a>
+							<a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+								Заказать
+							</a>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

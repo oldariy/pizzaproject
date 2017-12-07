@@ -1,0 +1,90 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'css/material-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'css/material.red-deep_orange.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script defer src="{% static 'js/material.min.js' %}"></script>
+  <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+  <script defer src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+
+<div class="basket__wrapper">
+	<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored show-modal">Корзина
+		<span id="basket_total_count">
+			{% if items_total_count %}
+				({{ items_total_count }})
+			{% else %}
+				(0)
+			{% endif %}
+		</span>
+	</button>
+  <dialog class="mdl-dialog">
+		<h3 class="mdl-dialog__title">Корзина</h3>
+    <div class="mdl-dialog__content">
+			<span id="basket_total_amount"></span>
+			<div class="basket">
+				<ul class="basket__ul">
+					{% for item_in_basket in items_in_basket %}
+						<li class="basket__item"> {{ item_in_basket.item.title }} {{ item_in_basket.count }}
+							шт. {{ item_in_basket.total_price }} руб.
+							<a class="delete-item" href="" data-item_id="{{ item_in_basket.id }}">x</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+    </div>
+    <div class="mdl-dialog__actions mdl-dialog__actions">
+      <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Оформить заказ</button>
+      <button type="button" class="mdl-button close">Отмена</button>
+    </div>
+  </dialog>
+</div>
+
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title"><a href="/" class="menu-link">Меню</a></span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Пицца</a>
+        <a class="mdl-navigation__link" href="">Роллы</a>
+        <a class="mdl-navigation__link" href="">Напитки</a>
+        <a class="mdl-navigation__link" href="">Оплата и доставка</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Меню</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Пицца</a>
+      <a class="mdl-navigation__link" href="">Роллы</a>
+      <a class="mdl-navigation__link" href="">Напитки</a>
+      <a class="mdl-navigation__link" href="">Оплата и доставка</a>
+    </nav>
+  </div>
+
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      {% block content %}{% endblock %}
+    </div>
+
+    <footer class="mdl-mini-footer">
+      <div class="mdl-mini-footer__left-section">
+        <div class="mdl-logo">Доставка пиццы в Омске 2017</div>
+        <ul class="mdl-mini-footer__link-list">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Privacy & Terms</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </main>
+</div>
+</body>
+</html>

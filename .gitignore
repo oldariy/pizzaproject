@@ -1,112 +1,124 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Python template
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-.static_storage/
-.media/
-local_settings.py
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-
-.idea/workspace.xml
-templates/
-
-# pycharm
-.idea
+## Created by .ignore support plugin (hsz.mobi)
+#### Python template
+## Byte-compiled / optimized / DLL files
+#__pycache__/
+#*.py[cod]
+#*$py.class
+#
+## C extensions
+#*.so
+#
+## Distribution / packaging
+#.Python
+#build/
+#develop-eggs/
+#dist/
+#downloads/
+#eggs/
+#.eggs/
+#lib/
+#lib64/
+#parts/
+#sdist/
+#var/
+#wheels/
+#*.egg-info/
+#.installed.cfg
+#*.egg
+#MANIFEST
+#
+## PyInstaller
+##  Usually these files are written by a python script from a template
+##  before PyInstaller builds the exe, so as to inject date/other infos into it.
+#*.manifest
+#*.spec
+#
+## Installer logs
+#pip-log.txt
+#pip-delete-this-directory.txt
+#
+## Unit test / coverage reports
+#htmlcov/
+#.tox/
+#.coverage
+#.coverage.*
+#.cache
+#nosetests.xml
+#coverage.xml
+#*.cover
+#.hypothesis/
+#
+## Translations
+#*.mo
+#*.pot
+#
+## Django stuff:
+#*.log
+#.static_storage/
+#.media/
+#local_settings.py
+#
+## Flask stuff:
+#instance/
+#.webassets-cache
+#
+## Scrapy stuff:
+#.scrapy
+#
+## Sphinx documentation
+#docs/_build/
+#
+## PyBuilder
+#target/
+#
+## Jupyter Notebook
+#.ipynb_checkpoints
+#
+## pyenv
+#.python-version
+#
+## celery beat schedule file
+#celerybeat-schedule
+#
+## SageMath parsed files
+#*.sage.py
+#
+## Environments
+#.env
+#.venv
+#env/
+#venv/
+#ENV/
+#env.bak/
+#venv.bak/
+#
+## Spyder project settings
+#.spyderproject
+#.spyproject
+#
+## Rope project settings
+#.ropeproject
+#
+## mkdocs documentation
+#/site
+#
+## mypy
+#.mypy_cache/
+#
+#.idea/workspace.xml
+#templates/
+#.idea/dataSources.local.xml
+#.idea/dataSources/
+#.idea/preferred-vcs.xml
+#db.sqlite3
+#media/
+#pizzashop/migrations/0001_initial.py
+#pizzashop/migrations/0002_dish_price.py
+#pizzashop/migrations/0003_auto_20171118_1405.py
+#pizzashop/migrations/0004_auto_20171118_1851.py
+#pizzashop/migrations/0005_auto_20171118_2059.py
+#pizzashop/migrations/0006_auto_20171118_2103.py
+#pizzashop/migrations/0007_auto_20171118_2104.py
+#pizzashop/migrations/0008_auto_20171118_2127.py
+#pizzashop/static/css/material.red-deep_orange.min.css
+#pizzashop/static/img/
