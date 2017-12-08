@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}
+  Доставка пиццы в Омске
+{% endblock %}
+
+
+{% block content %}
+  <div class="header">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="mdl-grid for-header">
+          <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
+            <h3 class="company">Доставка пиццы в Омске</h3>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet for-header__right">
+            <h4 class="phone">8-908-123-456-78-90</h4>
+            <span class="time">Режим работы: с 11:00 до 23:00 <br>без обеда и выходных</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mdl-cell mdl-cell--12-col">
+        <h4>Корзина:</h4>
+      </div>
+
+
+      <div class="mdl-cell mdl-cell--of mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+          <thead>
+          <tr>
+            <th class="mdl-data-table__cell--non-numeric">Блюдо</th>
+            <th>Количество</th>
+            <th>Цена за единицу</th>
+            <th>Общая стоимость</th>
+            <th>Удалить</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% for item_in_basket in items_in_basket %}
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">
+                {{ item_in_basket.item.title }}
+              </td>
+
+              <td>
+                <div class="mdl-textfield mdl-js-textfield is-dirty is-upgraded checkout__count" data-upgraded=",MaterialTextfield">
+                  <input class="mdl-textfield__input item-in-basket-count" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="count" value="{{ item_in_basket.count }}">
+                  <label class="mdl-textfield__label" for="count">Количество</label>
+                  <span class="mdl-textfield__error">Введите число!</span>
+                </div>
+              </td>
+
+              <td>
+                <span class="item-price">{{ item_in_basket.price_per_item }}</span> руб.
+              </td>
+
+              <td>
+                <span class="total_item_in_basket_amount">
+                  {{ item_in_basket.total_price }}
+                </span>
+                руб.
+              </td>
+
+              <td>
+                <a class="delete-item" href="" data-item_id="{{ item_in_basket.id }}"><i
+                    class="mdl-icon">clear</i></a>
+              </td>
+            </tr>
+          {%  endfor %}
+          </tbody>
+        </table>
+
+    </div>
+
+    <div class="mdl-cell mdl-cell--12-col">
+
+        <div class="basket_total_amount">
+          Сумма заказа: <span id="basket_total_amount"></span> руб.
+        </div>
+
+        <div class="basket__wrapper">
+          <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored show-modal"
+                  data-upgraded=",MaterialButton">Заказать
+          </button>
+        </div>
+    </div>
+
+  </div>
+{% endblock %}
