@@ -5,14 +5,27 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+.mdl-layout {
+	min-height: 100vh;
+}
 .mdl-layout__container {
 	position: static;
 }
+.mdl-layout__content{
+	display: flex;
+	flex-direction: column;
+}
+.page-content {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
 .header {
-	/*padding-top: 64px;*/
 	max-width: 1200px;
 	margin: 0 auto;
+	flex-grow: 1;
 }
+
 .for-header {
 	display: flex;
 	align-items: center;
@@ -58,10 +71,17 @@ img {
 	align-items: flex-end;
 	padding: 10px;
 }
-.mdl-dialog {
-	width: 380px;
+@media screen and (min-width: 420px) {
+	
+	.mdl-dialog {
+		width: 380px;
+		
+	}
 }
-
+.mdl-cell--of {
+	overflow-x:auto;
+	overflow-y: hidden;
+}
 .mdl-icon {
 	vertical-align: bottom;
 	font-family: 'Material Icons', sans-serif;
@@ -109,4 +129,22 @@ img {
 	padding: 5px;
 	/*color: #fff;*/
 	font-size: 16px;
+}
+.basket_total_amount {
+	font-size: 16px;
+	padding: 20px;
+	text-align: right;
+}
+.checkout__count {
+	width: 25px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 0;
+}
+.mdl-data-table {
+	width: 100%;
+	font-size: 16px;
+}
+.mdl-data-table th {
+	font-size: 14px;
 }

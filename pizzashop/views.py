@@ -58,3 +58,9 @@ def basket_adding(request):
         return_dict["items"].append(product_dict)
 
     return JsonResponse(return_dict)
+
+
+def checkout(request):
+    session_key = request.session.session_key
+    items_in_basket = BasketItem.objects.filter(session_key=session_key, is_active=True, order__isnull=True)
+    return render(request, 'pizzashop/checkout.html', locals())

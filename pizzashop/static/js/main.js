@@ -106,4 +106,25 @@ $(document).ready(function () {
 	dialog.querySelector('.close').addEventListener('click', function() {
 	  dialog.close();
 	});
+
+	
+	function calcBasketAmount() {
+		var total_order_amount = 0;
+		$('.total_item_in_basket_amount').each(function () {
+			total_order_amount += parseInt($(this).text());
+		});
+		$('#basket_total_amount').text(total_order_amount);
+	}
+
+	$(document).on('change', '.item-in-basket-count', function () {
+		var currentCount = $(this).val();
+		var currentTr = $(this).closest('tr');
+		var currentPrice = parseInt(currentTr.find('.item-price').text());
+		var totalAmount = currentPrice * currentCount;
+		currentTr.find('.total_item_in_basket_amount').text(totalAmount);
+
+		calcBasketAmount();
+	});
+
+	calcBasketAmount();
 });
