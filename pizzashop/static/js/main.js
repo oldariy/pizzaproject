@@ -14,7 +14,7 @@ $(document).ready(function () {
 		var data = {};
 		data.itemId = itemId;
 		data.count = count;
-		var csrf_token = $('#order-form [name="csrfmiddlewaretoken"]').val();
+		var csrf_token = $('#csrf [name="csrfmiddlewaretoken"]').val();
 		data["csrfmiddlewaretoken"] = csrf_token;
 		
 		var url = orderForm.attr('action');
@@ -34,7 +34,7 @@ $(document).ready(function () {
 					$('.basket__ul').html("");
 					$.each(data.items, function (k, v) {
 						$('.basket__ul').append('<li class="basket__item">' + v.name + ' ' + v.count + ' ' + 'шт. ' + (v.price_per_item * v.count) + ' руб. '
-							+ '<a class="delete-item" href="" data-item_id="' + v.id + '">x</a>' + '</li>');
+							+ '<a class="delete-item" href="" data-item_id="' + v.id + '"><i class="mdl-icon">clear</i></a>' + '</li>');
 					});
 					
 				}
@@ -61,12 +61,12 @@ $(document).ready(function () {
 		var data = {};
 		data.itemId = itemId;
 		data.count = count;
-		var csrf_token = $('#order-form [name="csrfmiddlewaretoken"]').val();
+		var csrf_token = $('#csrf [name="csrfmiddlewaretoken"]').val();
 		data["csrfmiddlewaretoken"] = csrf_token;
 		
 		data["is_delete"] = true;
 		
-		var url = orderForm.attr("action");
+		var url = $('#csrf').attr("action");
 		
 		console.log(data);
 		$.ajax({
@@ -83,7 +83,7 @@ $(document).ready(function () {
 					$('.basket__ul').html("");
 					$.each(data.items, function (k, v) {
 						$('.basket__ul').append('<li class="basket__item">' + v.name + ' ' + v.count + ' ' + 'шт. ' + (v.price_per_item * v.count) + ' руб. '
-							+ '<a class="delete-item" href="" data-item_id="' + v.id + '">x</a>' + '</li>');
+							+ '<a class="delete-item" href="" data-item_id="' + v.id + '"><i class="mdl-icon">clear</i></a>' + '</li>');
 					});
 					
 				}

@@ -61,9 +61,34 @@ img {
 .mdl-dialog {
 	width: 380px;
 }
+
+.mdl-icon {
+	vertical-align: bottom;
+	font-family: 'Material Icons', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
 .basket {
 	position: relative;
-	width: 280px;
 	max-width: 100%;
 }
 .basket__text {
@@ -73,13 +98,10 @@ img {
 .basket__ul {
 	margin: 0;
 	padding: 0;
-	/*position: absolute;*/
-	/*top: 0;*/
 	width: 100%;
 	z-index: 10;
 	list-style: none;
 	border-radius: 5px;
-	/*border: 2px solid darkred;*/
 	box-sizing: border-box;
 }
 .basket__item {
