@@ -8,6 +8,7 @@ def index(request):
     items = Item.objects.filter()
     session_key = request.session.session_key
     if not session_key:
+        request.session['session_key'] = 123
         request.session.cycle_key()
 
     return render(request, 'pizzashop/index.html', locals())
@@ -17,6 +18,7 @@ def item(request, item_id):
     item = Item.objects.get(id=item_id)
     session_key = request.session.session_key
     if not session_key:
+        request.session['session_key'] = 123
         request.session.cycle_key()
 
     return render(request, 'pizzashop/item.html', locals())
