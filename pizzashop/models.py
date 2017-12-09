@@ -6,7 +6,7 @@ class Customer(models.Model):
     first_name = models.CharField(max_length=50, verbose_name='Имя', blank=True)
     last_name = models.CharField(max_length=50, verbose_name='Фамилия', blank=True)
     address = models.CharField(max_length=150, verbose_name='Адес')
-    phone = PhoneNumberField(verbose_name='Телефон')
+    phone = models.CharField(max_length=20, verbose_name='Телефон')
     email = models.EmailField(blank=True, verbose_name='Email')
 
     def __str__(self):
@@ -65,6 +65,11 @@ class OrderItem(models.Model):
     item = models.ForeignKey(Item)
     order = models.ForeignKey(Order)
     count = models.PositiveSmallIntegerField(default=1)
+    price_per_item = models.PositiveSmallIntegerField(default=0)
+    total_price = models.PositiveSmallIntegerField(default=0)  # price*nmb
+    is_active = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True, auto_now=False)
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
         return str(self.item) + ' : ' + str(self.order)

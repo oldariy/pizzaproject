@@ -124,7 +124,11 @@ $(document).ready(function () {
 		currentTr.find('.total_item_in_basket_amount').text(totalAmount);
 
 		calcBasketAmount();
+
+
 	});
 
 	calcBasketAmount();
+
+
 });
