@@ -1,5 +1,4 @@
 from django.db import models
-from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Customer(models.Model):
@@ -101,5 +100,4 @@ class BasketItem(models.Model):
         price_per_item = self.item.price
         self.price_per_item = price_per_item
         self.total_price = int(self.count) * price_per_item
-
         super(BasketItem, self).save(*args, **kwargs)

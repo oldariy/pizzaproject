@@ -38,7 +38,7 @@
               <th>Удалить</th>
             </tr>
             </thead>
-            <tbody  class="checkout-tbody">
+            <tbody class="checkout-tbody">
             {% for item_in_basket in items_in_basket %}
               <tr class="checkout-tr">
                 <td class="mdl-data-table__cell--non-numeric checkout-td">
@@ -63,7 +63,7 @@
                   <span class="total_item_in_basket_amount">
                     {{ item_in_basket.total_price }}
                   </span>
-                    руб.
+                  руб.
                 </td>
 
                 <td class="checkout-td">
@@ -107,7 +107,8 @@
 
               <td>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input class="mdl-textfield__input" type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" id="sample4" name="{{ form.email.html_name }}">
+                  <input class="mdl-textfield__input" type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" id="sample4"
+                         name="{{ form.email.html_name }}">
                   <label class="mdl-textfield__label" for="sample4">Email</label>
                   <span class="mdl-textfield__error">Введите email!</span>
                 </div>

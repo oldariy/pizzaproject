@@ -26,9 +26,8 @@
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="">Пицца</a>
-        <a class="mdl-navigation__link" href="">Роллы</a>
-        <a class="mdl-navigation__link" href="">Напитки</a>
-        <a class="mdl-navigation__link" href="">Оплата и доставка</a>
+        <a class="mdl-navigation__link" href="">Оплата</a>
+        <a class="mdl-navigation__link" href=""> Доставка</a>
       </nav>
     </div>
   </header>
@@ -47,15 +46,17 @@
   <main class="mdl-layout__content">
     <div class="page-content">
       <div class="basket__wrapper">
-        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored show-modal">Корзина
+        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored show-modal">
+          Корзина
           <span id="basket_total_count">
-			{% if items_total_count %}
-        ({{ items_total_count }})
-      {% else %}
-        (0)
-      {% endif %}
-		</span>
+            {% if items_total_count %}
+              ({{ items_total_count }})
+            {% else %}
+              (0)
+            {% endif %}
+          </span>
         </button>
+
         <dialog class="mdl-dialog">
           <h3 class="mdl-dialog__title">Корзина</h3>
           <div class="mdl-dialog__content">
@@ -76,6 +77,7 @@
             <button type="button" class="mdl-button close">Закрыть</button>
           </div>
         </dialog>
+
       </div>
       {% block content %}{% endblock %}
     </div>
