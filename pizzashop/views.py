@@ -1,10 +1,7 @@
-from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
-
 from pizzashop.forms import CheckoutContactForm
 from .models import *
-# Create your views here.
-from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
+from django.http import JsonResponse
 
 
 def index(request):
@@ -108,8 +105,4 @@ def checkout(request):
 
 def thanks(request):
     session_key = request.session.session_key
-    # if not session_key:
-    #     request.session['session_key'] = 123
-    #     request.session.cycle_key()
-
     return render(request, 'pizzashop/thanks.html', locals())
