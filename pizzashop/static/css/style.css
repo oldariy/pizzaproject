@@ -120,6 +120,9 @@ img {
 	padding: 20px;
 	text-align: right;
 }
+.checkout-form {
+	width: 100%;
+}
 .checkout__count {
 	width: 25px;
 	margin-left: 10px;
