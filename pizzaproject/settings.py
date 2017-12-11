@@ -138,3 +138,8 @@ MEDIA_URL = '/media/'
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "najiermo@gmail.com"
+EMAIL_HOST_PASSWORD = "198000962"
+EMAIL_USE_TLS = True

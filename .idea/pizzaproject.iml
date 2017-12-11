@@ -12,7 +12,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.6.3 virtualenv at /Volumes/macfiles/Dropbox/Develop/Web/django/macvenv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6.2 virtualenv at E:\Dropbox\Develop\Web\django\pizzaenvnotebook" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jQuery-2.0.0" level="application" />
   </component>

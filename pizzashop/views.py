@@ -1,3 +1,4 @@
+from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from pizzashop.forms import CheckoutContactForm
 from .models import *
@@ -94,8 +95,10 @@ def checkout(request):
                                              price_per_item=item_in_basket.price_per_item,
                                              total_price=item_in_basket.total_price,
                                              order=order)
-
+            send_mail(order, 'Here is the message.', 'from@example.com',
+                      ['greypks@gmail.com'], fail_silently=False)
             items_in_basket = BasketItem.objects.filter(session_key=session_key).delete()
+
             return redirect('/thanks/')
 
         else:
