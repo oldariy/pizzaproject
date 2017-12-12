@@ -20,7 +20,13 @@ class Item(models.Model):
     title = models.CharField(max_length=30, verbose_name='Название')
     description = models.TextField(max_length=300, verbose_name='Описание', blank=True)
     price = models.PositiveSmallIntegerField(default=0, verbose_name='Цена')
-    image = models.ImageField(upload_to='pizzashop/', blank=False, verbose_name='Логотип', default='')
+    image = models.ImageField(upload_to='pizzashop/', blank=True, verbose_name='Логотип', default='')
+
+    def image_tag(self):
+        return u'<img src="%s" />' % self.image.url
+
+    image_tag.short_description = 'Image'
+    image_tag.allow_tags = True
 
     def __str__(self):
         return self.title
