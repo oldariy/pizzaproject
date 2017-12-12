@@ -25,16 +25,12 @@ img {
 	margin: 0 auto;
 	flex-grow: 1;
 }
-
 .for-header {
 	display: flex;
 	align-items: center;
 }
 .for-header__right {
 	text-align: right;
-}
-.company{
-
 }
 .time {
 	font-size: 16px;
@@ -72,22 +68,20 @@ img {
 	padding: 10px;
 }
 @media screen and (min-width: 420px) {
-	
 	.mdl-dialog {
 		width: 380px;
-		
 	}
 }
-.mdl-cell--of {
-	overflow-x:auto;
-	overflow-y: hidden;
-}
+/*.mdl-cell--of {*/
+	/*overflow-x:auto;*/
+	/*overflow-y: hidden;*/
+/*}*/
 .mdl-icon {
 	vertical-align: bottom;
 	font-family: 'Material Icons', sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 24px;
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -95,16 +89,9 @@ img {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-
-  /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
   font-feature-settings: 'liga';
 }
 .basket {
@@ -125,15 +112,16 @@ img {
 	box-sizing: border-box;
 }
 .basket__item {
-	/*background-color: darkred;*/
 	padding: 5px;
-	/*color: #fff;*/
 	font-size: 16px;
 }
 .basket_total_amount {
 	font-size: 16px;
 	padding: 20px;
 	text-align: right;
+}
+.checkout-form {
+	width: 100%;
 }
 .checkout__count {
 	width: 25px;
@@ -147,4 +135,64 @@ img {
 }
 .mdl-data-table th {
 	font-size: 14px;
+}
+.сheckout-form{
+	width: 100%;
+}
+@media only screen and (max-width: 730px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+
+  .mdl-data-table tbody tr {
+    height: auto;
+  }
+
+  .mdl-data-table tbody tr:nth-child(even) {
+    background-color: #eee;
+  }
+
+  .mdl-data-table td,
+  .mdl-data-table td:first-of-type {
+    padding-left: 50%;
+  }
+
+  .mdl-data-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding: 6px 18px 0;
+    white-space: nowrap;
+    content: attr(data-label);
+    text-align: left;
+    color: rgba(0, 0, 0, 0.541176);
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+  }
+
+  .mdl-data-table td:last-of-type {
+    padding-right: 18px;
+  }
+}
+
+.mdl-layout2 {
+	display: flex;
+	align-items: center;
+  justify-content: center;
+}
+.mdl-layout__content2 {
+	padding: 24px;
+	flex: none;
 }

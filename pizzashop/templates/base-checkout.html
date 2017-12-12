@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <script defer src="{% static 'js/material.min.js' %}"></script>
   <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
-  <script src="{% static 'js/dialog-polyfill.js' %}"></script>
   <script defer src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
@@ -46,40 +45,6 @@
 
   <main class="mdl-layout__content">
     <div class="page-content">
-      <div class="basket__wrapper">
-        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored show-modal">
-          Корзина
-          <span id="basket_total_count">
-            {% if items_total_count %}
-              ({{ items_total_count }})
-            {% else %}
-              (0)
-            {% endif %}
-          </span>
-        </button>
-
-        <dialog class="mdl-dialog">
-          <h3 class="mdl-dialog__title">Корзина</h3>
-          <div class="mdl-dialog__content">
-            <div class="basket">
-              <ul class="basket__ul">
-                {% for item_in_basket in items_in_basket %}
-                  <li class="basket__item"> {{ item_in_basket.item.title }} {{ item_in_basket.count }}
-                    шт. {{ item_in_basket.total_price }} руб.
-                    <a class="delete-item" href="" data-item_id="{{ item_in_basket.id }}"><i class="mdl-icon">clear</i></a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-          <div class="mdl-dialog__actions mdl-dialog__actions">
-            <a href="/checkout/" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Оформить
-              заказ</a>
-            <button type="button" class="mdl-button close">Закрыть</button>
-          </div>
-        </dialog>
-
-      </div>
       {% block content %}{% endblock %}
     </div>
 

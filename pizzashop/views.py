@@ -1,7 +1,8 @@
-from django.shortcuts import render
-from .models import Item, BasketItem
-# Create your views here.
-from django.http import HttpResponse, JsonResponse
+from django.core.mail import send_mail
+from django.shortcuts import render, redirect
+from pizzashop.forms import CheckoutContactForm
+from .models import *
+from django.http import JsonResponse
 
 
 def index(request):
@@ -37,7 +38,8 @@ def basket_adding(request):
     if is_delete == 'true':
         BasketItem.objects.filter(id=item_id).update(is_active=False)
     else:
-        new_item, created = BasketItem.objects.get_or_create(session_key=session_key, item_id=item_id, is_active=True, defaults={"count": count})
+        new_item, created = BasketItem.objects.get_or_create(session_key=session_key, item_id=item_id, is_active=True,
+                                                             defaults={"count": count})
 
         if not created:
             print("not created")
@@ -63,4 +65,47 @@ def basket_adding(request):
 def checkout(request):
     session_key = request.session.session_key
     items_in_basket = BasketItem.objects.filter(session_key=session_key, is_active=True, order__isnull=True)
+    form = CheckoutContactForm(request.POST or None)
+
+    if request.POST:
+        print(request.POST)
+        if form.is_valid():
+            print('yes, valid!')
+            data = request.POST
+            name = data.get('name')
+            email = data.get('email')
+            address = data.get('address')
+            phone = data.get('phone')
+            user, create = Customer.objects.get_or_create(first_name=name, phone=phone, email=email, address=address,
+                                                          defaults={'first_name': name})
+
+            order = Order.objects.create(customer=user, status='CR')
+
+            for name, value in data.items():
+                if name.startswith("item_in_basket_"):
+                    item_in_basket_id = name.split("item_in_basket_")[1]
+                    item_in_basket = BasketItem.objects.get(id=item_in_basket_id)
+                    print(type(value))
+
+                    item_in_basket.count = value
+                    item_in_basket.order = order
+                    item_in_basket.save(force_update=True)
+
+                    OrderItem.objects.create(item=item_in_basket.item, count=item_in_basket.count,
+                                             price_per_item=item_in_basket.price_per_item,
+                                             total_price=item_in_basket.total_price,
+                                             order=order)
+            send_mail(order, 'Here is the message.', 'from@example.com',
+                      ['greypks@gmail.com'], fail_silently=False)
+            items_in_basket = BasketItem.objects.filter(session_key=session_key).delete()
+
+            return redirect('/thanks/')
+
+        else:
+            print('NO, NOT VALID!')
     return render(request, 'pizzashop/checkout.html', locals())
+
+
+def thanks(request):
+    session_key = request.session.session_key
+    return render(request, 'pizzashop/thanks.html', locals())

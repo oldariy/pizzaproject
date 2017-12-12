@@ -12,14 +12,16 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.6.3 virtualenv at D:\project pizza\piizavenv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6.2 virtualenv at E:\Dropbox\Develop\Web\django\pizzaenvnotebook" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jQuery-2.0.0" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../pizzaproject\templates" />
+        <option value="$MODULE_DIR$/pizzashop/templates" />
+        <option value="$MODULE_DIR$/pizzashop/templates/pizzashop" />
       </list>
     </option>
   </component>
