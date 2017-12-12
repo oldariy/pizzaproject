@@ -23,9 +23,8 @@ class Item(models.Model):
     image = models.ImageField(upload_to='pizzashop/', blank=True, verbose_name='Логотип', default='')
 
     def image_tag(self):
-        return u'<img src="%s" />' % self.image.url
-
-    image_tag.short_description = 'Image'
+        return u'<img  src="%s"/>' % self.image.url
+    image_tag.short_description = 'Логотип'
     image_tag.allow_tags = True
 
     def __str__(self):
@@ -56,7 +55,7 @@ class Order(models.Model):
         (COMPLETED, 'Выполнен'),
         (FAILED, 'Провален'),
     )
-    status = models.CharField(max_length=3, choices=STATUS, default=CREATED)
+    status = models.CharField(max_length=3, choices=STATUS, default=CREATED, verbose_name='Статус заказа')
 
     def __str__(self):
         return str(self.customer) + ' : ' + str(self.status)
@@ -67,14 +66,14 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
-    item = models.ForeignKey(Item)
-    order = models.ForeignKey(Order)
-    count = models.PositiveSmallIntegerField(default=1)
-    price_per_item = models.PositiveSmallIntegerField(default=0)
-    total_price = models.PositiveSmallIntegerField(default=0)
-    is_active = models.BooleanField(default=True)
-    created = models.DateTimeField(auto_now_add=True, auto_now=False)
-    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+    item = models.ForeignKey(Item, verbose_name='Товар')
+    order = models.ForeignKey(Order, verbose_name='Номер заказа')
+    count = models.PositiveSmallIntegerField(default=1, verbose_name='Количество')
+    price_per_item = models.PositiveSmallIntegerField(default=0, verbose_name='Цена')
+    total_price = models.PositiveSmallIntegerField(default=0, verbose_name='Сумма заказа')
+    is_active = models.BooleanField(default=True, verbose_name='Готовность')
+    created = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name='Создан')
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True, verbose_name='Обновлен')
 
     def __str__(self):
         return str(self.item) + ' : ' + str(self.order)

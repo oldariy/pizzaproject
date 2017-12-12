@@ -1,7 +1,6 @@
 from django.contrib import admin
 from pizzashop.models import Customer, Order, Item, OrderItem, BasketItem
 
-
 class CustomerAdmin(admin.ModelAdmin):
     # list_display = ['first_name', 'phone', 'address']
     list_display = [field.name for field in Customer._meta.fields]
@@ -12,9 +11,9 @@ class CustomerAdmin(admin.ModelAdmin):
         model = Customer
 
 class ItemAdmin (admin.ModelAdmin):
-    #list_display = ['title', 'description', 'price', 'image', 'imgfile']
-    list_display = [field.name for field in Item._meta.fields]
-    fields = ('title', 'description', 'price', 'image', 'image_tag',)
+    list_display = ['id','title', 'description', 'price', 'image_tag']
+    #list_display = [field.name for field in Item._meta.fields]
+    fields = ('id','title', 'description', 'price', 'image_tag')
     readonly_fields = ('image_tag',)
     search_fields  = ['title', 'price', 'description']
     list_filter = ['price']
@@ -22,8 +21,20 @@ class ItemAdmin (admin.ModelAdmin):
     class Meta:
         model = Item
 
+class OrderAdmin(admin.ModelAdmin):
+    # list_display = ['customer', 'items', 'status']
+    list_display = [field.name for field in Order._meta.fields]
+    search_fields = ['customer', 'items', 'status']
+    list_filter = ['status']
+
+class OrderItemAdmin (admin.ModelAdmin):
+    # list_display = ['item', 'order', 'count', 'price_per_item', 'total_price', 'is_active', 'created', 'updated']
+    list_display = [field.name for field in OrderItem._meta.fields]
+    search_fields = ['item', 'order', 'count', 'price_per_item', 'total_price', 'is_active', 'created', 'updated']
+    list_filter = ['order']
+
 admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Item, ItemAdmin)
-admin.site.register(Order)
-admin.site.register(OrderItem)
+admin.site.register(Order, OrderAdmin)
+admin.site.register(OrderItem, OrderItemAdmin)
 admin.site.register(BasketItem)
