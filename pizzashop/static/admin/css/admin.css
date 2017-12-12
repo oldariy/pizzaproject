@@ -1,0 +1,7 @@
+.field-image_tag {
+	max-width: 150px;
+}
+.field-image_tag img {
+	max-width: 100%;
+	height: auto;
+}
