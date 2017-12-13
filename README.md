@@ -16,4 +16,15 @@ alter role django_user set default_transaction_isolation to 'read committed';
 alter role django_user set timezone to 'Antarctica/Vostok'; 
 create database django_db owner django_user;
 ```
-5. 
+5. Create folder for project and create virtual environment, install django and another components:
+
+```sh
+$ mkdir pizzaapp
+$ cd pizzaapp
+$ python -m venv pizzavenv
+$ pip install django~=1.11.2
+```
+6. Activate virtual environment:
+```sh
+pizzavenv\Scripts\activate
+```
