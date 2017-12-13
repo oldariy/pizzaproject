@@ -7,12 +7,13 @@
         <option name="settingsModule" value="pizzaproject/settings.py" />
         <option name="manageScript" value="manage.py" />
         <option name="environment" value="&lt;map/&gt;" />
+        <option name="doNotUseTestRunner" value="false" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.6.2 virtualenv at D:\Dropbox\Develop\Web\django\pizzaenvnotebook" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6 (compenv)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jQuery-2.0.0" level="application" />
   </component>
