@@ -41,4 +41,4 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 $ python manage.py runserver
 ```
-9 Open [url](127.0.0.1:8000)
+9. Open [url](http://127.0.0.1:8000)
