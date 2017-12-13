@@ -1,6 +1,6 @@
 # PizzaProject
 
-Web app for pizzeria using Django, MDL, Jquery, PostgreSQL.
+Web app for pizzeria using Django, MDL, jQuery, PostgreSQL.
 
 ### Install
 
@@ -16,4 +16,4 @@ alter role django_user set default_transaction_isolation to 'read committed';
 alter role django_user set timezone to 'Antarctica/Vostok'; 
 create database django_db owner django_user;
 ```
-5.
+5. 
