@@ -2,54 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22c9019c-52a0-4c7d-9d3b-fbb506d01fd4" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/0d2df6fa-173c-45b4-869b-65bddcfaf5d5.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/0d2df6fa-173c-45b4-869b-65bddcfaf5d5/_metadata_/metadata" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/0d2df6fa-173c-45b4-869b-65bddcfaf5d5/_metadata_/metadata.keystream" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/0d2df6fa-173c-45b4-869b-65bddcfaf5d5/_metadata_/metadata.keystream.len" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/0d2df6fa-173c-45b4-869b-65bddcfaf5d5/_metadata_/metadata.len" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/0d2df6fa-173c-45b4-869b-65bddcfaf5d5/_metadata_/metadata.values.at" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/0d2df6fa-173c-45b4-869b-65bddcfaf5d5/_metadata_/metadata_i" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/0d2df6fa-173c-45b4-869b-65bddcfaf5d5/_metadata_/metadata_i.len" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/0d2df6fa-173c-45b4-869b-65bddcfaf5d5/storage.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/0d2df6fa-173c-45b4-869b-65bddcfaf5d5/storage_v2/_src_/database/django_db.4tPIug.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/0d2df6fa-173c-45b4-869b-65bddcfaf5d5/storage_v2/_src_/database/django_db.4tPIug/schema/public.abK9xQ.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/pizzaproject (Конфликтующая копия с компьютера Computer 2017-12-13).iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/preferred-vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace (Конфликтующая копия с компьютера Computer 2017-12-10).xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace (Конфликтующая копия с компьютера Computer 2017-12-13).xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/master" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/media/pizzashop/0d230-480-480_LGQ5Eb5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/media/pizzashop/0d230-480-480_VJfQN3G_CD8fNR9.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/media/pizzashop/0d230-480-480_VJfQN3G_zJxDUSS.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/media/pizzashop/0d230-480-480_tgFEEme_wtRCkQD.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/media/pizzashop/0d230-480-480_tgFEEme_wtRCkQD_qOiWSpU.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/media/pizzashop/0d230-480-480_tgFEEme_wtRCkQD_qOiWSpU_GcH7154.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/media/pizzashop/0d230-480-480_tgFEEme_wtRCkQD_qOiWSpU_GcH7154_Q8s4Br7.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/media/pizzashop/mozarelo.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/media/pizzashop/mozarelo_mJxPRVB.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/media/pizzashop/mozarelo_txpcv3w.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0009_auto_20171119_2220.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0010_auto_20171203_1908.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0011_basketitem_session_key.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0012_remove_basketitem_session_key.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0013_auto_20171205_1317.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0014_auto_20171205_1328.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0015_auto_20171205_1444.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0016_auto_20171209_2025.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0017_auto_20171210_2231.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0018_auto_20171211_1738.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0019_auto_20171214_0116.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0020_auto_20171214_1626.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0021_auto_20171215_0024.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0022_auto_20171215_0043.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pizzashop/migrations/0023_auto_20171215_0049.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/pizzaproject/settings.py" afterPath="$PROJECT_DIR$/pizzaproject/settings.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,7 +28,7 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pizzashop/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
+            <state relative-caret-position="578">
               <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -86,7 +40,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pizzashop/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1076">
+            <state relative-caret-position="3349">
               <caret line="197" column="1" lean-forward="false" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
               <folding />
             </state>
@@ -126,7 +80,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pizzashop/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="374">
               <caret line="22" column="91" lean-forward="false" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
               <folding />
             </state>
@@ -156,8 +110,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pizzaproject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+            <state relative-caret-position="68">
+              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
                 <element signature="e#316#325#0" expanded="true" />
               </folding>
@@ -168,7 +122,7 @@
       <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pizzaproject/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="272">
               <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
               <folding>
                 <element signature="e#229#238#0" expanded="true" />
@@ -245,8 +199,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="105" />
-    <option name="y" value="82" />
+    <option name="x" value="57" />
+    <option name="y" value="110" />
     <option name="width" value="1566" />
     <option name="height" value="948" />
   </component>
@@ -287,8 +241,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,6 +262,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -618,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513278688519</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="commit for heroku">
+      <created>1513278914846</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1513278914846</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView">
@@ -631,7 +592,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="105" y="82" width="1566" height="948" extended-state="0" />
+    <frame x="57" y="110" width="1566" height="948" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298193" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26655897" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
@@ -639,7 +600,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34932348" sideWeight="0.7390318" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22177956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2244356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -924,17 +885,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="731">
             <caret line="43" column="2" lean-forward="false" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1016,7 +977,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pizzashop/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
+        <state relative-caret-position="578">
           <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -1026,7 +987,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pizzashop/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1076">
+        <state relative-caret-position="3349">
           <caret line="197" column="1" lean-forward="false" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
           <folding />
         </state>
@@ -1034,7 +995,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pizzashop/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="374">
           <caret line="22" column="91" lean-forward="false" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
           <folding />
         </state>
@@ -1042,7 +1003,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pizzaproject/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="272">
           <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding>
             <element signature="e#229#238#0" expanded="true" />
@@ -1052,8 +1013,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pizzaproject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        <state relative-caret-position="68">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
             <element signature="e#316#325#0" expanded="true" />
           </folding>
