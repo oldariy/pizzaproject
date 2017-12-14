@@ -13,9 +13,9 @@ class CustomerAdmin(admin.ModelAdmin):
 
 
 class ItemAdmin (admin.ModelAdmin):
-    list_display = ['id','title', 'description', 'price', 'image_tag']
+    list_display = ['title', 'description', 'price', 'image_tag']
     # list_display = [field.name for field in Item._meta.fields]
-    fields = ('id', 'title', 'description', 'price', 'image_tag')
+    fields = ('title', 'description', 'price', 'image', 'image_tag')
     readonly_fields = ('image_tag',)
     search_fields = ['title', 'price', 'description']
     list_filter = ['price']
@@ -33,15 +33,16 @@ class ItemAdmin (admin.ModelAdmin):
 class OrderAdmin(admin.ModelAdmin):
     # list_display = ['customer', 'items', 'status']
     list_display = [field.name for field in Order._meta.fields]
-    search_fields = ['customer', 'items', 'status']
+    search_fields = ['customer', 'status']
     list_filter = ['status']
 
 
 class OrderItemAdmin (admin.ModelAdmin):
     # list_display = ['item', 'order', 'count', 'price_per_item', 'total_price', 'is_active', 'created', 'updated']
     list_display = [field.name for field in OrderItem._meta.fields]
-    search_fields = ['item', 'order', 'count', 'price_per_item', 'total_price', 'is_active', 'created', 'updated']
-    list_filter = ['order']
+    # search_fields = ['order__id']
+    search_fields = ['item', 'order__id', 'count', 'price_per_item', 'total_price', 'is_active', 'created', 'updated']
+    list_filter = ['order__id', 'order__customer__phone']
 
 
 admin.site.register(Customer, CustomerAdmin)
