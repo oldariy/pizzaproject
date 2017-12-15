@@ -1,7 +1,7 @@
 ## Created by .ignore support plugin (hsz.mobi)
 #### Python template
 ## Byte-compiled / optimized / DLL files
-#__pycache__/
+__pycache__/
 #*.py[cod]
 #*$py.class
 #
@@ -110,7 +110,7 @@
 #.idea/dataSources.local.xml
 #.idea/dataSources/
 #.idea/preferred-vcs.xml
-#db.sqlite3
+db.sqlite3
 #media/
 #pizzashop/migrations/0001_initial.py
 #pizzashop/migrations/0002_dish_price.py
